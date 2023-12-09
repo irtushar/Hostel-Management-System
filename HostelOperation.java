@@ -46,7 +46,6 @@ public class HostelOperation
 	}
 	
 	
-	
 	public void serchbyId(ArrayList <Student> students) 
 	{
 		System.out.printf("Please Enter A Valid Id: ");
@@ -57,16 +56,12 @@ public class HostelOperation
 			if(id.equalsIgnoreCase(s.id) == true) 
 			{
 				this.display(s);
-				System.out.println(s.name+"this student is removed");
-				students.remove(s);
-				System.out.println("Removed successful, total student are: "+students.size());
 				return;
 			}	
 		}
 		System.out.println("No student found");
 	}
 	  
-	
 	
 	public void serchbyYear(ArrayList <Student> students) 
 	{
@@ -78,11 +73,10 @@ public class HostelOperation
 		{
 			if(s.year == year) 
 			{
-				this.display(s);	
+			     this.display(s);	
 			}	
 		}
 	 }
-	
 	
 	
 	public void delete(ArrayList <Student> students) 
@@ -95,6 +89,8 @@ public class HostelOperation
 			if(id.equalsIgnoreCase(s.id) == true) 
 			{
 				this.display(s);
+				students.remove(s);
+				System.out.println("Removed successful, total student are: "+students.size());
 				return;
 			}	
 		}
